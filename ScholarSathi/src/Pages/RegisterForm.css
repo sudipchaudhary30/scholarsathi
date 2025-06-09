@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+body, .registration-page {
+  margin: 0;
+  padding: 0;
+  background: url('/assets/desktop-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+  body, .registration-page {
+    background: url('/assets/mobile-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+  z-index: 0;
+}
+
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateX(-3%);
+  z-index: 1;
+  width: 92%;
+  max-width: 360px;
+  padding: 20px 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+
+.form-container h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff4081;
+  background: linear-gradient(45deg, #ff4081, #f5b041);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 3px rgba(245, 176, 65, 0.7);
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.form-container h2 {
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #555;
+}
+
+input,
+select {
+  width: 90%;
+  padding: 7px 9px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: border 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #ff69b4;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  margin-top: 40px;
+  width: 100%;
+  padding: 11px;
+  background: linear-gradient(135deg, #f5b041, #ec4899);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #f39c12, #db2777);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 18px 14px;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-container h1 {
+    font-size: 24px;
+  }
+
+  .form-container h2 {
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    font-size: 11px;
+    padding: 7px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .input-group label {
+    font-size: 11px;
+  }
+}
