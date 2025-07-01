@@ -1,13 +1,12 @@
 
 .hero-about {
-  background: url('Flux_Dev_Sure_Oshika_Heres_a_wellcrafted_prompt_to_generate_a__3.jpg') center/cover no-repeat;
+  background: url('ScholarSathi/public/assets/Flux_Dev_Sure_Oshika_Heres_a_wellcrafted_prompt_to_generate_a__3.jpg') center/cover no-repeat;
   height: 70vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .hero-overlay-about {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;

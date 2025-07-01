@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './ContactUs.css';
 
@@ -62,7 +61,6 @@ const ContactUs = () => {
           <p>[Google Map Embed or Screenshot Placeholder]</p>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="faq-section">
         <h2>❓ Frequently Asked Questions</h2>
