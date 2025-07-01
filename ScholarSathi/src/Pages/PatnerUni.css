@@ -1,0 +1,195 @@
+/* Hero Section */
+.hero-patner {
+  background-image: url('/assets/students.jpg'); /* Use absolute path from public/assets */
+  background-size: cover;
+  background-position: center;
+  height: 900px;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay-patner {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.hero-patner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Partners Section */
+.partners-section {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #0a1126, #0b1f3a);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.partners-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* University Grid */
+.university-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.university-card {
+  background-color: #111d3c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.university-card:hover {
+  transform: scale(1.05);
+}
+
+.university-card img {
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* CTA */
+.cta-section {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #0b132b;
+  text-align: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Animated Gallery Section */
+.animated-gallery {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 4rem 2rem;
+  background: #0b1f3a;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.animated-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Animated Floating Images */
+.animated-image {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 12px;
+  animation: floatY 4s ease-in-out infinite;
+  opacity: 0;
+  /* Start hidden for fade-in */
+}
+
+/* Keyframes for floating animation */
+@keyframes floatY {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Fade-in Animations */
+.fade-in-left {
+  animation: fadeInLeft 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+.fade-in-up {
+  animation: fadeInUp 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+.fade-in-right {
+  animation: fadeInRight 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero-patner {
+    height: 400px;
+    padding: 0 10px;
+  }
+  .gallery-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .university-grid {
+    grid-template-columns: 1fr;
+  }
+  .partners-section,
+  .animated-gallery,
+  .cta-section {
+    padding: 2rem 0.5rem;
+  }
+}

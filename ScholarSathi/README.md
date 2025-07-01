@@ -1,0 +1,1 @@
+ScholarSathi is a gamified AR-based student registration platform where users scan QR codes, hunt virtual mascots, and unlock personalized scholarship offers through an interactive and engaging experience.
