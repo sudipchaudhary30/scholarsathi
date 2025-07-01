@@ -1,0 +1,253 @@
+
+.hero-about {
+  background: url('Flux_Dev_Sure_Oshika_Heres_a_wellcrafted_prompt_to_generate_a__3.jpg') center/cover no-repeat;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay-about {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-text-about h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  color: #e0e0e0;
+}
+
+/* ===========================
+   Info Sections
+=========================== */
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #101d36;
+  padding: 60px 20px;
+  gap: 30px;
+}
+
+.info-box {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background: #0c1a2b;
+  border-radius: 15px;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.info-box h2 {
+  margin-bottom: 15px;
+  color: #4dbfff;
+}
+
+/* ===========================
+   Team Section
+=========================== */
+.team-section {
+  padding: 60px 20px;
+  background-color: #0c1324;
+  text-align: center;
+}
+
+.team-section h2 {
+  color: #4dbfff;
+  margin-bottom: 30px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.team-card {
+  background: #111c2f;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  height: 220px;
+}
+
+.team-card h3 {
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.team-card p {
+  color: #b3c6e0;
+  font-size: 1rem;
+}
+
+/* ===========================
+   Partner Section
+=========================== */
+.partners-section {
+  padding: 60px 20px;
+  background: radial-gradient(circle at 30% 30%, #1e293b 0%, #0f172a 70%);
+  text-align: center;
+}
+
+.partners-section h2 {
+  color: #4dbfff;
+  margin-bottom: 10px;
+}
+
+.partners-section p {
+  color: #e0e0e0;
+  margin-bottom: 40px;
+}
+
+.partner-logos {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.partner-logos img {
+  height: 160px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* ===========================
+   CTA Section
+=========================== */
+.cta-section {
+  background: #0c1324;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.cta-section h2 {
+  margin-bottom: 15px;
+  color: #4dbfff;
+}
+
+.cta-section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #e0e0e0;
+}
+
+.cta-section .btn.primary-btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 36px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-section .btn.primary-btn:hover {
+  background: #2563eb;
+}
+
+/* ===========================
+   Owl Blur Overlays
+=========================== */
+.owl-overlay {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.top-blur {
+  top: 0;
+  left: 0;
+}
+
+.bottom-blur {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 900px) {
+  .info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .partner-logos {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    height: 40vh;
+    padding: 0 10px;
+  }
+  .info-box {
+    padding: 18px;
+    max-width: 95vw;
+  }
+  .team-card {
+    width: 90vw;
+    padding: 12px;
+  }
+  .team-card img {
+    height: 160px;
+  }
+  .partners-section {
+    padding: 30px 5px;
+  }
+  .partner-logos img {
+    height: 90px;
+    padding: 5px;
+  }
+  .cta-section {
+    padding: 60px 10px;
+  }
+}
