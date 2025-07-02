@@ -45,17 +45,17 @@ html, body {
   width: 50px;
   height: 60px;
   object-fit: contain;
-   margin-top: 50px;
+  margin-top: 50px; 
   left: 5px;
   margin-bottom: 30px;
-    display: flex;
+  display: flex;
 }
 
 .logo-text {
   margin-left: 5px;
   font-size: 22px;
   font-weight: bold;
-   margin-top: 50px; 
+  margin-top: 50px; 
   margin-bottom: 30px;
 }
 
@@ -69,12 +69,11 @@ html, body {
   padding: 8px 15px; 
   display: block;
   border-radius: 4px;
-  text-align: left;
-  
+  text-align: left; 
 }
 
 .sidebar ul li a:hover {
-   background-color: rgba(17, 34, 66, 0.95);
+  background-color: rgba(17, 34, 66, 0.95);
 }
 
 .sidebar ul {
@@ -99,7 +98,6 @@ html, body {
   z-index: 2;
 }
 
-
 .toggle-btn:focus {
   outline: none;
 }
@@ -117,40 +115,36 @@ html, body {
   justify-content: center;
 }
 
-
 .main-content {
-  margin-right: 250px;               
-  width: calc(100% - 250px);        
-  padding: 20px;              
-  box-sizing: border-box;
   position: fixed;
   top: 0;
-  margin-left: 200px;
- 
+  left: 250px;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 header h1 {
   color: white;
   margin-bottom: 5px;
-    text-align: left;
-   left:0;
+  text-align: left;
+  left:0;
 }
 
 header p {
   color: white;
   margin-bottom: 30px;
-    text-align: left;
-     left:0;
+  text-align: left;
+  left:0;
 }
-
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
   margin-bottom: 30px;
-
- 
 }
 
 .card {
@@ -177,10 +171,9 @@ header p {
   color: white;
 }
 
-
 .updates {
   max-height: 200px;
-    text-align: left;
+  text-align: left;
 }
 
 .updates h2 {
@@ -200,8 +193,7 @@ header p {
   border-left: 4px solid #2980b9;
   border-radius: 6px;
   font-size: 15px;
-  font-weight: 500;
-   
+  font-weight: 500;  
 }
 
 .btn {
@@ -215,7 +207,6 @@ header p {
   transition: background-color 0.3s ease;
   outline: none;
 }
-
 
 .btn-edit {
   background-color: rgb(85, 175, 100);
@@ -232,7 +223,6 @@ header p {
 .btn-delete:hover {
   background-color: #c0392b;
 }
-
 
 .btn:focus {
   outline: none;
