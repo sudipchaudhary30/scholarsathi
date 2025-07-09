@@ -1,0 +1,556 @@
+/* =============================
+   Hero Section
+============================= */
+.hero {
+  height: 100vh;
+  width: 100vw; /* Ensure full viewport width */
+  background: url('/assets/landing page.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(9, 17, 34, 0.9) 30%, rgba(9, 17, 34, 0.3) 70%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  animation: slideUp 1.2s ease-out both;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw + 1rem, 3.8rem);
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 32px;
+  max-width: 460px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+/* =============================
+   Keyframe Animations
+============================= */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* =============================
+   Owl Section (Mascot Highlight)
+============================= */
+.owl-section {
+  position: relative;
+  height: 65vh;
+  background: radial-gradient(circle at 30% 30%, #1e293b 0%, #0f172a 70%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.owl-overlay {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.top-blur {
+  top: 0;
+}
+
+.bottom-blur {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.owl-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.4s ease-out;
+}
+
+.owl-image {
+  width: 340px;
+  max-width: 95%;
+  animation: floatY 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.owl-image:hover {
+  transform: scale(1.05);
+}
+
+.owl-heading {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-top: 24px;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+.owl-subtext {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-top: 8px;
+  opacity: 0.85;
+}
+
+/* =============================
+   How It Works Section
+============================= */
+.how-it-works {
+  background: radial-gradient(circle at 5% 5%, #0f172a  70%,  #0b3372 );
+  padding: 80px 20px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.how-it-works h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: white;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 280px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.4);
+}
+
+.step img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3));
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.step p {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* =============================
+   Stats Section
+============================= */
+.stats-section {
+  background: radial-gradient(circle at 5% 5%, #0f172a  65%,  #0b3372 );
+  padding: 80px 20px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation: fadeUp 1.2s ease-in-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stats-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  min-width: 200px;
+  max-width: 240px;
+}
+
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.3);
+}
+
+.stat span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.stat p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  font-weight: 500;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* =============================
+   Partners Section
+============================= */
+.partners {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 30% 30%, #1e293b 0%, #0f172a 70%);
+  padding: 40px 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 0;
+}
+
+.partner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  width: 100%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.partner-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.partner-text p {
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+  color: #9ca3af;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.university-logos {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.university-card {
+  background: #1e293b;
+  padding: 24px 20px 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(27, 40, 58, 0.6);
+  width: 160px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.university-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.6);
+}
+
+.university-card img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  border-radius: 8px;
+  transition: filter 0.3s ease;
+}
+
+.university-card:hover img {
+  filter: drop-shadow(0 0 12px rgba(59, 130, 246, 0.8));
+}
+
+.university-card p {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #e0e7ff;
+  letter-spacing: 0.02em;
+}
+
+.owl-overlay {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.top-blur {
+  top: 0;
+  left: 0;
+}
+
+.bottom-blur {
+  bottom: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+/* =============================
+   Responsive Design
+============================= */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 24px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 0 24px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .owl-section {
+    height: auto;
+    padding: 60px 20px 100px;
+  }
+
+  .owl-image {
+    width: 260px;
+  }
+
+  .owl-heading {
+    font-size: 1.8rem;
+  }
+
+  .owl-subtext {
+    font-size: 1rem;
+  }
+
+  .how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .step img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .step h3 {
+    font-size: 1.3rem;
+  }
+
+  .step p {
+    font-size: 1rem;
+  }
+
+  .steps {
+    gap: 32px;
+  }
+
+  .stats {
+    gap: 30px;
+  }
+
+  .stats-section h2 {
+    font-size: 2rem;
+  }
+
+  .stat {
+    min-width: 140px;
+    padding: 24px 16px;
+  }
+
+  .stat span {
+    font-size: 1.6rem;
+  }
+
+  .stat p {
+    font-size: 1rem;
+  }
+
+  .partners {
+    padding: 30px 16px;
+  }
+
+  .partner-text h2 {
+    font-size: 2rem;
+  }
+
+  .partner-text p {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .university-card {
+    width: 130px;
+    padding: 20px 16px 24px;
+  }
+
+  .university-card img {
+    width: 100px;
+    margin-bottom: 14px;
+  }
+
+  .university-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .owl-image {
+    width: 220px;
+  }
+
+  .owl-heading {
+    font-size: 1.5rem;
+  }
+
+  .owl-subtext {
+    font-size: 0.95rem;
+  }
+
+  .owl-section {
+    padding: 50px 16px 90px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .university-logos {
+    gap: 20px;
+  }
+
+  .university-card {
+    width: 110px;
+    padding: 16px 12px 20px;
+  }
+
+  .university-card img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .university-card p {
+    font-size: 0.85rem;
+  }
+}

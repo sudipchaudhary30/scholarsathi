@@ -1,0 +1,446 @@
+/* Hero Section */
+.hero-patner {
+  background-image: url('assets/patner university.jpg'); /* Use absolute path from public/assets */
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: relative; 
+
+  
+}
+
+.hero-overlay-patner {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.hero-patner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Partners Section */
+.partners-section {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #1e293b,   #0f172a);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.partners-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+ /*University Grid *//* ================================
+   Hero Section
+================================ */
+.hero-patner {
+  background-image: url('/assets/university patner.jpg'); /* Correct path for Vite/public */
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay-patner {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.hero-patner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* ================================
+   Partners Section
+================================ */
+.partners-section {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #0a1126, #0b1f3a);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.partners-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* University Grid */
+.university-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.university-card-patner {
+  background-color: #111d3c;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  padding: 50px 80px;
+    width: 280px;
+    height: 350px;
+     margin: 0 auto;
+}
+
+.university-card-patner:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.university-card-patner img {
+  /* height: 80px; */
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px;
+   height: 160px;
+}
+
+/* ================================
+   CTA Section
+================================ */
+.cta-section {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #0b132b;
+  text-align: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   Animated Gallery Section
+================================ */
+.animated-gallery {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 4rem 2rem;
+  /* background: rgba(59, 130, 246, 0.3); */
+   /* background: radial-gradient(circle at 5% 5%, #0f172a  70%,  #0b3372 ); */
+   /* background: 0 0 10px rgba(59, 130, 246, 0.4); */
+    /* background: radial-gradient(circle at 5% 5%, #0f172a  70%,  #0b3372 ); */
+      background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.animated-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.animated-image {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 12px;
+  animation: floatY 4s ease-in-out infinite;
+  opacity: 0;
+}
+
+
+
+.background-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  background-size: cover;
+  background-position: center;
+  animation: slider 12s infinite;
+}
+
+@keyframes slider {
+  0% {
+    background-image: url('/assets/sunway partner.jpg');
+  }
+  33% {
+    background-image: url('/assets/Softwarica partner.jpg');
+  }
+  66% {
+    background-image: url('/assets/british partner.jpg');
+  }
+  100% {
+    background-image: url('/assets/softwarica partner 2.png');
+  }
+}
+
+/* Keyframes for floating animation */
+@keyframes floatY {
+  0% { transform: translateY(0px);}
+  50% { transform: translateY(-20px);}
+  100% { transform: translateY(0px);}
+}
+
+/* Fade-in Animations */
+.fade-in-left {
+  animation: fadeInLeft 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+.fade-in-up {
+  animation: fadeInUp 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+.fade-in-right {
+  animation: fadeInRight 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px);}
+  to { opacity: 1; transform: translateX(0);}
+}
+
+/* ================================
+   Responsive Design
+================================ */
+@media (max-width: 900px) {
+  .hero-patner {
+    height: 400px;
+    padding: 0 10px;
+  }
+  .gallery-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .university-grid {
+    grid-template-columns: 1fr;
+  }
+  .partners-section,
+  .animated-gallery,
+  .cta-section {
+    padding: 2rem 0.5rem;
+  }
+  .university-card-patner {
+    padding: 18px 8px;
+  }
+  .animated-image {
+    width: 90vw;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-patner {
+    height: 250px;
+    padding: 0 4px;
+  }
+  .university-card-patner img {
+    height: 50px;
+    padding: 4px;
+  }
+  .animated-image {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+ .university-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+  
+} 
+ 
+.university-card-patner{
+  /* background-color: #111d3c; */
+   background: rgba(255, 255, 255, 0.05);
+  /* padding: 1.5rem; */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+
+     padding: 30px 16px;
+  
+
+  
+} 
+
+.university-card:hover {
+  transform: scale(1.05);
+}
+
+.university-card img {
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* CTA */
+.cta-section {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #0b132b;
+  text-align: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Animated Gallery Section */
+.animated-gallery {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 4rem 2rem;
+  background: #0b1f3a;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.animated-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Animated Floating Images */
+.animated-image {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 12px;
+  animation: floatY 4s ease-in-out infinite;
+  opacity: 0;
+  /* Start hidden for fade-in */
+}
+
+/* Keyframes for floating animation */
+@keyframes floatY {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Fade-in Animations */
+.fade-in-left {
+  animation: fadeInLeft 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+.fade-in-up {
+  animation: fadeInUp 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+.fade-in-right {
+  animation: fadeInRight 1.2s forwards, floatY 4s ease-in-out infinite;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero-patner {
+    height: 400px;
+    padding: 0 10px;
+  }
+  .gallery-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  .university-grid {
+    grid-template-columns: 1fr;
+  }
+  .partners-section,
+  .animated-gallery,
+  .cta-section {
+    padding: 2rem 0.5rem;
+  }
+}

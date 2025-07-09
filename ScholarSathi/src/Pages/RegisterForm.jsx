@@ -1,76 +1,71 @@
-import React from "react";
-import "./RegisterForm.css"; // Assuming CSS is saved in the same folder
+import React, { useState } from 'react';
+import './RegisterForm.css';
 
-const RegisterForm = () => {
+const RegistrationPage = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    age: '',
+    email: '',
+    phone: '',
+    address: '',
+    course: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Registration submitted:\n" + JSON.stringify(formData, null, 2));
+  };
+
   return (
-    <div className="registration-page">
-      <div className="overlay"></div>
-      <div className="form-container">
-        <h1>ScholarSathi</h1>
-        <h2>Register</h2>
-        <form>
-          <div className="input-group">
-            <label htmlFor="fullname">Name</label>
-            <input
-              type="text"
-              id="fullname"
-              placeholder="Full Name"
-              required
-            />
-          </div>
+    <div className="main-content-area">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="hero-overlay">
+          <h1>Welcome to ScholarSathi</h1>
+          <p>Empowering students to reach their academic dreams with guidance, mentorship, and opportunities.</p>
+          <a href="#register" className="scroll-btn">↓ Scroll to Register</a>
+        </div>
+      </section>
 
-          <div className="input-group">
-            <label htmlFor="age">Age</label>
-            <input
-              type="number"
-              id="age"
-              placeholder="Your Age"
-              min="10"
-              max="100"
-              required
-            />
-          </div>
+      {/* Info Section */}
+      <section className="info-section">
+        <h2>Why Join ScholarSathi?</h2>
+        <p>Get connected to the best courses, mentorships, and learning resources designed to help you excel in your field of interest.</p>
+      </section>
 
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="example@mail.com"
-              required
-            />
+      {/* Registration Section */}
+      <section className="registration-section" id="register">
+        <div className="form-wrapper">
+          <div className="form-inner-container">
+            <div className="animated-hat">🎓</div>
+            <h2>Student Registration</h2>
+            <form onSubmit={handleSubmit}>
+              <input type="text" name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} required />
+              <input type="number" name="age" placeholder="Age" value={formData.age} onChange={handleChange} required />
+              <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+              <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
+              <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} required />
+              <select name="course" value={formData.course} onChange={handleChange} required>
+                <option value="">Select Preferred Course</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="Design & Multimedia">Design & Multimedia</option>
+              </select>
+              <button type="submit">Register</button>
+              <button type="button" className="admin-btn">Sign in as Admin</button>
+            </form>
           </div>
+        </div>
+      </section>
 
-          <div className="input-group">
-            <label htmlFor="phone">Phone</label>
-            <input
-              type="tel"
-              id="phone"
-              placeholder="10-digit number"
-              pattern="[0-9]{10}"
-              required
-            />
-          </div>
-
-          <div className="input-group">
-            <label htmlFor="course">Course</label>
-            <select id="course" required defaultValue="">
-              <option value="" disabled>
-                Select Course
-              </option>
-              <option value="engineering">Engineering</option>
-              <option value="medical">Medical</option>
-              <option value="arts">Arts</option>
-              <option value="commerce">Commerce</option>
-              <option value="science">Science</option>
-            </select>
-          </div>
-
-          <button type="submit">Register</button>
-        </form>
-      </div>
+      {/* Footer */}
+     
     </div>
   );
 };
 
-export default RegisterForm;
+export default RegistrationPage;
